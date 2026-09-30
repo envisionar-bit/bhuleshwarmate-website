@@ -8,7 +8,8 @@ import crypto from 'crypto';
 const ORIGIN = 'https://www.bhuleshwarmate.com';
 // Site lives at the repo root so GitHub Pages ("deploy from branch /") serves it directly.
 const OUT = path.resolve('.');
-const PAGES = ['', 'profile', 'profile/professionalsummary', 'design-practice', 'teaching-outreach',
+// The homepage ('') is hand-designed (index.html + home/), so it is NOT re-mirrored from Wix.
+const PAGES = ['profile', 'profile/professionalsummary', 'design-practice', 'teaching-outreach',
   'public-engagement', 'administrative-roles', 'awards', 'gallery', 'contact'];
 const ASSET_TYPES = new Set(['image', 'font', 'stylesheet', 'media']);
 const EXT = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'image/gif': 'gif', 'image/svg+xml': 'svg',
@@ -16,7 +17,7 @@ const EXT = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'im
   'text/css': 'css', 'video/mp4': 'mp4', 'application/font-woff2': 'woff2', 'application/font-woff': 'woff' };
 
 // Clean only what this script generates (never tools/, .git, README, ...)
-for (const e of ['assets', '_files', 'index.html', ...PAGES.filter(Boolean).map(p => p.split('/')[0])])
+for (const e of ['assets', '_files', ...PAGES.map(p => p.split('/')[0])])
   fs.rmSync(path.join(OUT, e), { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true });
 

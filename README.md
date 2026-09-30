@@ -5,12 +5,13 @@ repo root (`index.html`, one folder per page, `assets/`, `_files/`), so the same
 served by GitHub Pages and Cloudflare Pages. All URLs are relative, so it works from a
 sub-path (`/bhuleshwarmate-website/`) or from a domain root.
 
-- `tools/mirror.mjs` – re-snapshots the live Wix site into the repo root (`npm run mirror`)
+- `index.html` + `home/` – the **redesigned homepage** (hand-written HTML/CSS/JS, self-hosted Inter Tight font). Not touched by the mirror script.
+- `tools/mirror.mjs` – re-snapshots the other 9 Wix pages into the repo root (`npm run mirror`)
 - `tools/relativize.mjs` – converts absolute URLs to relative ones (run by the mirror script)
 - `.nojekyll` – needed so GitHub Pages serves `_files/` and `_headers`
 
 ## GitHub Pages
-Settings → Pages → Source: *Deploy from a branch* → Branch: the default branch, folder `/ (root)`.
+Settings → Pages → Source: *Deploy from a branch* → Branch: `main`, folder `/ (root)`.
 Live at https://envisionar-bit.github.io/bhuleshwarmate-website/
 
 ## Cloudflare Pages

@@ -81,3 +81,28 @@
     location.href = 'mailto:contact@envisionar.in?subject=' + encodeURIComponent('Project enquiry: ' + (v('topic') || 'Hello')) + '&body=' + encodeURIComponent(body);
   });
 })();
+
+// Mobile quick actions: contact menu (phone, email, social) and back-to-top
+(function () {
+  var fab = document.getElementById('fab');
+  if (!fab) return;
+  var btn = fab.querySelector('.fab-btn');
+  var top = fab.querySelector('.fab-top');
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function set(open) { fab.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); }
+  btn.addEventListener('click', function (e) { e.stopPropagation(); set(!fab.classList.contains('open')); });
+  document.addEventListener('click', function (e) { if (e.target === fab || !fab.contains(e.target)) set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+  top.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' }); });
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(function () {
+      top.classList.toggle('show', window.scrollY > window.innerHeight * 0.8);
+      if (fab.classList.contains('open') && window.scrollY > 0) { /* keep open while scrolling */ }
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();

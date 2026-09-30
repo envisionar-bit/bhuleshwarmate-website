@@ -24,23 +24,17 @@ const layout = read('src/partials/layout.html');
 const projects = JSON.parse(read('src/data/projects.json'));
 const archive = JSON.parse(read('src/data/archive.json'));
 
-const SERVICES = {
-  'brand-identity': 'Brand identity', 'print-design': 'Print design', signage: 'Signage & hoardings',
-  packaging: 'Packaging & more', 'exhibition-events': 'Exhibition & events', 'digital-social': 'Digital & social',
-};
+const featured = projects.filter(p => p.featured).sort((x, y) => x.featured - y.featured);
 
 const generators = {
-  'work-filters': () => [['all', 'All work', projects.length], ...Object.entries(SERVICES).map(([k, v]) =>
-    [k, v, projects.filter(p => p.svc.includes(k)).length])]
-    .map(([k, v, n], i) => `<button type="button" class="chip" data-filter="${k}" aria-pressed="${i === 0}">${esc(v)} <sup>${n}</sup></button>`).join('\n'),
-  'work-count': () => String(projects.length),
-  'work-grid': () => projects.map(p => `
-      <article class="wcard" data-svc="${p.svc.join(' ')}">
-        <a class="wimg" href="${p.url}" rel="noopener" tabindex="-1" aria-hidden="true"><img src="{{root}}work/img/${p.slug}.webp" alt="" width="${p.w}" height="${p.h}" loading="lazy" decoding="async"></a>
-        <h3><a href="${p.url}" rel="noopener">${esc(p.name)}<span class="arrow"> ↗</span></a></h3>
-        <p>${esc(p.desc)}</p>
-        <ul class="tags">${p.tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
-      </article>`).join('\n'),
+  'work-count': () => String(featured.length),
+  'work-featured': () => featured.map(p => `
+        <article class="pcard">
+          <a class="pimg" href="${p.url}" rel="noopener" tabindex="-1" aria-hidden="true"><img src="{{root}}work/img/${p.slug}.webp" alt="" width="${p.w}" height="${p.h}" loading="lazy" decoding="async"></a>
+          <h3><a href="${p.url}" rel="noopener">${esc(p.name)} <span class="arrow">↗</span></a></h3>
+          <p>${esc(p.desc)}</p>
+          <p class="ext">Case study on envisionar.in</p>
+        </article>`).join('\n'),
   'archive-grid': () => archive.map(a => `
       <figure class="afig rv"><img src="{{root}}work/archive/${a.file}.webp" alt="${esc(a.alt)}" loading="lazy" decoding="async" width="${a.w}" height="${a.h}"><figcaption>${esc(a.caption)}</figcaption></figure>`).join('\n'),
 };

@@ -4,7 +4,8 @@ import fs from 'fs';
 import { execSync } from 'child_process';
 import sharp from 'sharp';
 
-const projects = JSON.parse(fs.readFileSync('src/data/projects.json', 'utf8'));
+const all = JSON.parse(fs.readFileSync('src/data/projects.json', 'utf8'));
+const projects = all.filter(p => p.featured);   // only featured projects are shown on the Work page
 fs.mkdirSync('work/img', { recursive: true });
 for (const p of projects) {
   const out = `work/img/${p.slug}.webp`;
@@ -18,4 +19,4 @@ for (const p of projects) {
   const m = await sharp(out).metadata();   // dimensions let the page reserve space (no layout shift)
   p.w = m.width; p.h = m.height;
 }
-fs.writeFileSync('src/data/projects.json', JSON.stringify(projects, null, 1));
+fs.writeFileSync('src/data/projects.json', JSON.stringify(all, null, 1));

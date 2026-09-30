@@ -48,26 +48,17 @@
   }
 })();
 
-// Work page: filter projects by service (all projects stay visible without JS)
+// Work page: previous/next buttons for the sideways project scroller
 (function () {
-  var chips = document.querySelectorAll('.chip[data-filter]');
-  var cards = document.querySelectorAll('.wcard');
-  if (!chips.length) return;
-  var count = document.getElementById('wcount');
-  function apply(key) {
-    var n = 0;
-    cards.forEach(function (c) {
-      var show = key === 'all' || (' ' + c.getAttribute('data-svc') + ' ').indexOf(' ' + key + ' ') > -1;
-      c.hidden = !show;
-      if (show) n++;
+  var row = document.querySelector('.hscroll');
+  var btns = document.querySelectorAll('[data-hs]');
+  if (!row || !btns.length) return;
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      row.scrollBy({ left: Number(b.getAttribute('data-hs')) * row.clientWidth * 0.8, behavior: calm ? 'auto' : 'smooth' });
     });
-    chips.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-filter') === key); });
-    if (count) count.textContent = 'Showing ' + n + ' of ' + cards.length + ' projects';
-    try { history.replaceState(null, '', key === 'all' ? location.pathname : '#' + key); } catch (e) {}
-  }
-  chips.forEach(function (b) { b.addEventListener('click', function () { apply(b.getAttribute('data-filter')); }); });
-  var h = location.hash.slice(1);
-  if (h && document.querySelector('.chip[data-filter="' + h + '"]')) apply(h);
+  });
 })();
 
 // Contact page: turn the form into a ready-to-send email (no server needed)

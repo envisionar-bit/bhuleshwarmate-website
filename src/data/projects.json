@@ -17,7 +17,8 @@
   "file": "envisionar-datamines-logo-design-colour-palette.jpg",
   "url": "https://envisionar.in/portfolio-pages/datamines",
   "w": 1400,
-  "h": 788
+  "h": 788,
+  "featured": 0
  },
  {
   "slug": "dr-priyas-pmc",
@@ -37,7 +38,8 @@
   "file": "envisionar-dr-priyas-pmc-clinic-brand-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/dr-priyas-pmc",
   "w": 843,
-  "h": 1400
+  "h": 1400,
+  "featured": 2
  },
  {
   "slug": "easytax",
@@ -54,7 +56,8 @@
   "file": "envisionar-easytax-brand-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/easytax",
   "w": 847,
-  "h": 1400
+  "h": 1400,
+  "featured": 10
  },
  {
   "slug": "gordey-groups",
@@ -73,7 +76,8 @@
   "file": "envisionar-gordey-groups-brand-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/gordey-groups",
   "w": 955,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "greenzone-avkins",
@@ -93,7 +97,8 @@
   "file": "envisionar-greenzone-avkins-brand-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/greenzone-avkins",
   "w": 764,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "maha-handloom",
@@ -113,7 +118,8 @@
   "file": "envisionar-maha-handloom-brand-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/maha-handloom",
   "w": 1056,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "metroarch",
@@ -133,7 +139,8 @@
   "file": "envisionar-metroarch-brand-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/metroarch",
   "w": 872,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "neemboli",
@@ -152,7 +159,8 @@
   "file": "envisionar-neemboli-phone-logo-mockup.jpg",
   "url": "https://envisionar.in/portfolio-pages/neemboli",
   "w": 803,
-  "h": 556
+  "h": 556,
+  "featured": 5
  },
  {
   "slug": "nitya",
@@ -171,7 +179,8 @@
   "file": "envisionar-nitya-desktop-logo-mockup.jpg",
   "url": "https://envisionar.in/portfolio-pages/nitya",
   "w": 531,
-  "h": 531
+  "h": 531,
+  "featured": 4
  },
  {
   "slug": "saga",
@@ -190,7 +199,8 @@
   "file": "envisionar-saga-phone-logo-mockup.jpg",
   "url": "https://envisionar.in/portfolio-pages/saga",
   "w": 1400,
-  "h": 911
+  "h": 911,
+  "featured": 6
  },
  {
   "slug": "saj-jewellers",
@@ -209,7 +219,8 @@
   "file": "envisionar-saj-jewellers-medallion-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/saj-jewellers",
   "w": 980,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "sattvam-solutions",
@@ -228,7 +239,8 @@
   "file": "envisionar-sattvam-solutions-wordmark-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/sattvam-solutions",
   "w": 630,
-  "h": 1400
+  "h": 1400,
+  "featured": 7
  },
  {
   "slug": "vernacular-branding",
@@ -247,7 +259,8 @@
   "file": "envisionar-vernacular-branding-book-cover-alt-1.jpg",
   "url": "https://envisionar.in/portfolio-pages/vernacular-branding",
   "w": 1400,
-  "h": 985
+  "h": 985,
+  "featured": 3
  },
  {
   "slug": "wealth-wizard",
@@ -266,7 +279,8 @@
   "file": "envisionar-wealth-wizard-phone-logo-mockup.jpg",
   "url": "https://envisionar.in/portfolio-pages/wealth-wizard",
   "w": 800,
-  "h": 960
+  "h": 960,
+  "featured": 8
  },
  {
   "slug": "ajmera-tyre",
@@ -283,7 +297,8 @@
   "file": "envisionar-ajmera-tyre-brand-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/ajmera-tyre",
   "w": 1047,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "andaaz",
@@ -300,7 +315,8 @@
   "file": "envisionar-andaaz-signage-detail.jpg",
   "url": "https://envisionar.in/portfolio-pages/andaaz",
   "w": 1030,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "baidyanath",
@@ -317,7 +333,8 @@
   "file": "envisionar-baidyanath-bhasma-range-advertisement.png",
   "url": "https://envisionar.in/portfolio-pages/baidyanath",
   "w": 1400,
-  "h": 1082
+  "h": 1082,
+  "featured": 0
  },
  {
   "slug": "century-travels",
@@ -336,7 +353,8 @@
   "file": "envisionar-century-travels-brand-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/century-travels",
   "w": 1132,
-  "h": 1400
+  "h": 1400,
+  "featured": 9
  },
  {
   "slug": "columbia-hospital",
@@ -353,7 +371,8 @@
   "file": "envisionar-columbia-hospital-hospital-folder-front-panel.jpg",
   "url": "https://envisionar.in/portfolio-pages/columbia-hospital",
   "w": 1400,
-  "h": 811
+  "h": 811,
+  "featured": 0
  },
  {
   "slug": "headstart",
@@ -370,7 +389,8 @@
   "file": "envisionar-headstart-logo.png",
   "url": "https://envisionar.in/portfolio-pages/headstart",
   "w": 1200,
-  "h": 1200
+  "h": 1200,
+  "featured": 0
  },
  {
   "slug": "iffi-1993",
@@ -387,7 +407,8 @@
   "file": "envisionar-iffi-1993-identity-mark-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/iffi-1993",
   "w": 990,
-  "h": 1400
+  "h": 1400,
+  "featured": 1
  },
  {
   "slug": "kastakar",
@@ -402,7 +423,8 @@
   "file": "envisionar-kastakar-brand-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/kastakar",
   "w": 1400,
-  "h": 990
+  "h": 990,
+  "featured": 0
  },
  {
   "slug": "maharashtra-mandal-trivandrum",
@@ -419,7 +441,8 @@
   "file": "envisionar-maharashtra-mandal-trivandrum-emblem-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/maharashtra-mandal-trivandrum",
   "w": 1009,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "mandap",
@@ -439,7 +462,8 @@
   "file": "envisionar-mandap-brand-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/mandap",
   "w": 1258,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "megapower-elektroenergiya",
@@ -454,7 +478,8 @@
   "file": "envisionar-megapower-elektroenergiya-logo-concept-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/megapower-elektroenergiya",
   "w": 1400,
-  "h": 990
+  "h": 990,
+  "featured": 0
  },
  {
   "slug": "nap-neeru-art-printers",
@@ -471,7 +496,8 @@
   "file": "envisionar-nap-neeru-art-printers-business-card-stack-mockup.jpg",
   "url": "https://envisionar.in/portfolio-pages/nap-neeru-art-printers",
   "w": 1400,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "rivaaz-boutique",
@@ -488,7 +514,8 @@
   "file": "envisionar-rivaaz-boutique-envelope.jpg",
   "url": "https://envisionar.in/portfolio-pages/rivaaz-boutique",
   "w": 1400,
-  "h": 1067
+  "h": 1067,
+  "featured": 0
  },
  {
   "slug": "shah-furniture",
@@ -507,7 +534,8 @@
   "file": "envisionar-shah-furniture-logo.jpg",
   "url": "https://envisionar.in/portfolio-pages/shah-furniture",
   "w": 1174,
-  "h": 1206
+  "h": 1206,
+  "featured": 0
  },
  {
   "slug": "shridhar-steels",
@@ -524,7 +552,8 @@
   "file": "envisionar-shridhar-steels-logo.jpg",
   "url": "https://envisionar.in/portfolio-pages/shridhar-steels",
   "w": 1400,
-  "h": 1239
+  "h": 1239,
+  "featured": 0
  },
  {
   "slug": "siddhartha-welfare-association",
@@ -541,7 +570,8 @@
   "file": "envisionar-siddhartha-welfare-association-emblem-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/siddhartha-welfare-association",
   "w": 895,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "snugo-tali",
@@ -558,7 +588,8 @@
   "file": "envisionar-snugo-tali-monogram-signage-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/snugo-tali",
   "w": 1094,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  },
  {
   "slug": "strategic-concepts",
@@ -575,7 +606,8 @@
   "file": "envisionar-strategic-concepts-logo.jpg",
   "url": "https://envisionar.in/portfolio-pages/strategic-concepts",
   "w": 1280,
-  "h": 678
+  "h": 678,
+  "featured": 0
  },
  {
   "slug": "vrushali-offset-works",
@@ -594,6 +626,7 @@
   "file": "envisionar-vrushali-offset-works-brand-identity-board.jpg",
   "url": "https://envisionar.in/portfolio-pages/vrushali-offset-works",
   "w": 1064,
-  "h": 1400
+  "h": 1400,
+  "featured": 0
  }
 ]

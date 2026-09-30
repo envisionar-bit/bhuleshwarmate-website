@@ -10,7 +10,7 @@ Plain static HTML/CSS/JS with no runtime framework, so the same files work on an
 | --- | --- |
 | `src/pages/*.html` | Page content, one file per page (JSON header for title, description, "next" link) |
 | `src/partials/layout.html` | Shared shell: head, menu overlay, ghost wordmarks, footer slot |
-| `src/data/projects.json`, `archive.json` | Work page data (33 EnVisionAr projects + archive) |
+| `src/data/projects.json`, `archive.json` | Work page data: the 10 featured EnVisionAr projects (`featured` = order on the page; the rest are kept but not shown) and the archive |
 | `tools/build.mjs` | Builds `src/pages` into the `*/index.html` files at the repo root (`npm run build`) |
 | `tools/work-images.mjs` | Downloads the project images from envisionar.in into `work/img/` as web-sized WebP (`npm run images`, needs `sharp`) |
 | `ds/` | Design system: `site.css` (tokens + components), `site.js`, self-hosted Inter Tight font |
@@ -22,7 +22,8 @@ The `*/index.html` files at the root are **generated**. Edit `src/`, run `npm ru
 ## Editing
 - Text on a page: edit `src/pages/<page>.html`.
 - Menu, header or footer: edit `src/partials/layout.html` (menu items live in `tools/build.mjs`).
-- Add a project to Work: add an entry to `src/data/projects.json`, run `npm run images` then `npm run build`.
+- Feature another project on Work: set its `featured` number in `src/data/projects.json`, run `npm run images` then `npm run build`.
+- Arrows: `→` means a page on this site, `↗` means another website (envisionar.in etc.).
 - `gallery/` is only a redirect to `work/` for old links.
 
 ## Hosting

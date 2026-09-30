@@ -1,8 +1,7 @@
 # bhuleshwarmate-website
 
 Website of Prof. Bhuleshwar Mate, redesigned from the old Wix site (www.bhuleshwarmate.com).
-Plain static HTML/CSS/JS with no runtime framework, so the same files work on GitHub Pages
-and Cloudflare Pages. All URLs are relative, so it also works under a sub-path
+Plain static HTML/CSS/JS with no runtime framework, so the same files work on any static host. All URLs are relative, so it also works under a sub-path
 (`/bhuleshwarmate-website/`) or on a domain root.
 
 ## Structure
@@ -27,9 +26,11 @@ The `*/index.html` files at the root are **generated**. Edit `src/`, run `npm ru
 - `gallery/` is only a redirect to `work/` for old links.
 
 ## Hosting
-**GitHub Pages:** Settings → Pages → *Deploy from a branch* → `main`, `/ (root)`. `.nojekyll` is required.
-**Cloudflare Pages:** connect this repo, framework preset None, no build command, output directory `/`.
-Then add the custom domain.
+Hosted on **Cloudflare Pages** (free). Connect this repo, production branch `main`, framework preset None,
+no build command, output directory `/`. The site is pre-built, so pushing to `main` deploys it.
+- `_headers` sets cache rules, `_redirects` redirects the old `/gallery` URL to `/work/`, `404.html` is the not-found page.
+- `sitemap.xml`, `robots.txt` and the canonical links use `https://www.bhuleshwarmate.com` (set in `tools/build.mjs`).
+- GitHub is used for the source only (GitHub Pages' terms don't suit a commercial site, so it is not used for hosting).
 
 ## Design
 Monochrome grotesk layout (inspired by bleibtgleich.dev) with the EnVisionAr blue `#0A00E9` as the only accent.

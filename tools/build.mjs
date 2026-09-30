@@ -6,6 +6,7 @@ import fs from 'fs';
 import path from 'path';
 
 const SITE = 'Prof. Bhuleshwar Mate';
+const ORIGIN = 'https://www.bhuleshwarmate.com';   // canonical domain (used for canonical links and the sitemap)
 const MENU = [
   ['home', '', 'Home'],
   ['profile', 'profile/', 'Profile'],
@@ -49,6 +50,7 @@ function menuHtml(nav, root) {
     `<li><a href="${href ? root + href : root || './'}"${key === nav ? ' aria-current="page"' : ''}><sup>${i + 1}</sup>${label.replace('&', '&amp;')}</a></li>`).join('\n      ');
 }
 
+const sitemap = [];
 function build(file) {
   const src = read(file);
   const m = src.match(/^<!--(\{[\s\S]*?\})-->\s*/);
@@ -56,9 +58,12 @@ function build(file) {
   const meta = JSON.parse(m[1]);
   let content = src.slice(m[0].length);
   const slug = meta.slug ?? path.basename(file, '.html');
-  const out = slug === 'index' ? 'index.html' : `${slug}/index.html`;
+  const out = meta.out || (slug === 'index' ? 'index.html' : `${slug}/index.html`);
   const depth = slug === 'index' ? 0 : slug.split('/').length;
-  const root = depth ? '../'.repeat(depth) : '';
+  // A 404 page can be served from any path, so it must use root-absolute URLs
+  const root = meta.absoluteRoot ? '/' : (depth ? '../'.repeat(depth) : '');
+  const canonicalUrl = ORIGIN + '/' + (slug === 'index' ? '' : slug + '/');
+  if (!meta.redirect && !meta.absoluteRoot) sitemap.push(canonicalUrl);
   if (meta.redirect) {
     fs.mkdirSync(path.dirname(out) || '.', { recursive: true });
     fs.writeFileSync(out, `<!DOCTYPE html>
@@ -86,8 +91,9 @@ function build(file) {
     .replace('{{menu}}', menuHtml(meta.nav, root))
     .replace('{{content}}', content)
     .replace('{{next}}', next + legal)
+    .replace('{{canonical}}', meta.absoluteRoot ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${canonicalUrl}">`)
     .replace('{{scripts}}', (meta.scripts || []).map(s => `<script src="{{root}}${s}" defer></script>`).join('\n'))
-    .replaceAll('{{home}}', root || './')
+    .replaceAll('{{home}}', meta.absoluteRoot ? '/' : (root || './'))
     .replaceAll('{{root}}', root);
   fs.mkdirSync(path.dirname(out) || '.', { recursive: true });
   fs.writeFileSync(out, html);
@@ -96,3 +102,5 @@ function build(file) {
 
 const files = fs.readdirSync('src/pages').filter(f => f.endsWith('.html')).map(f => path.join('src/pages', f));
 console.log('built', files.map(build).join(', '));
+fs.writeFileSync('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemap.sort().map(u => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`);
+fs.writeFileSync('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${ORIGIN}/sitemap.xml\n`);

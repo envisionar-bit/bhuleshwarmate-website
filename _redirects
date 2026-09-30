@@ -1,0 +1,3 @@
+# The old Wix site had /gallery; it is now /work
+/gallery   /work/   301
+/gallery/  /work/   301

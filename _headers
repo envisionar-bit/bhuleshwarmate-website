@@ -1,5 +1,18 @@
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+/ds/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/img/*
+  Cache-Control: public, max-age=604800
+
+/work/img/*
+  Cache-Control: public, max-age=604800
+
+/work/archive/*
+  Cache-Control: public, max-age=604800
+
+/_files/*
+  Cache-Control: public, max-age=86400

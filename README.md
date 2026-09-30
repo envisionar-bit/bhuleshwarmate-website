@@ -30,6 +30,7 @@ Hosted on **Cloudflare Pages** (free). Connect this repo, production branch `mai
 no build command, output directory `/`. The site is pre-built, so pushing to `main` deploys it.
 - `_headers` sets cache rules, `_redirects` redirects the old `/gallery` URL to `/work/`, `404.html` is the not-found page.
 - `sitemap.xml`, `robots.txt` and the canonical links use `https://www.bhuleshwarmate.com` (set in `tools/build.mjs`).
+- `CNAME` names the custom domain for GitHub Pages. It is only there while GitHub Pages temporarily serves the domain during the registrar transfer; delete it when GitHub Pages is switched off.
 - GitHub is used for the source only (GitHub Pages' terms don't suit a commercial site, so it is not used for hosting).
 
 ## Design

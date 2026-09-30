@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230a00e9'/%3E%3C/svg%3E">
+<link rel="preload" href="{{root}}ds/InterTight.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{root}}ds/site.css">
+<script>document.documentElement.className += ' js';</script>
+</head>
+<body class="{{bodyClass}}">
+<a class="skip" href="#main">Skip to content</a>
+
+<a class="mark" href="#top" aria-label="Back to top"></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+<div class="ghost l" aria-hidden="true">bhuleshwar</div>
+<div class="ghost r" aria-hidden="true">mate</div>
+
+<nav class="overlay" id="menu" aria-label="Site">
+  <div class="overlay-in">
+    <ol>
+      {{menu}}
+    </ol>
+    <div class="more">
+      <a href="https://envisionar.in/" rel="noopener">EnVisionAr Design Atelier ↗</a>
+      <a href="https://www.vernacularbranding.in/" rel="noopener">Vernacular Branding ↗</a>
+      <a href="{{root}}profile/professionalsummary/">Professional summary (PDF)</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+{{content}}
+</main>
+{{next}}
+<script src="{{root}}ds/site.js" defer></script>
+{{scripts}}
+</body>
+</html>

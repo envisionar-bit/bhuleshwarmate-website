@@ -2,11 +2,10 @@
   "name": "bhuleshwarmate-website",
   "private": true,
   "type": "module",
-  "description": "Static snapshot of www.bhuleshwarmate.com (migrated from Wix), hosted on Cloudflare Pages",
+  "description": "Website of Prof. Bhuleshwar Mate (EnVisionAr Design Atelier), hosted on GitHub Pages / Cloudflare Pages",
   "scripts": {
-    "mirror": "node tools/mirror.mjs",
-    "preview": "npx wrangler pages dev .",
-    "deploy": "npx wrangler pages deploy . --project-name=bhuleshwarmate-website"
+    "build": "node tools/build.mjs",
+    "images": "node tools/work-images.mjs"
   },
-  "devDependencies": { "playwright": "^1.56.0" }
+  "devDependencies": { "sharp": "^0.35.0" }
 }

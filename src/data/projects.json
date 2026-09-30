@@ -1,0 +1,599 @@
+[
+ {
+  "slug": "datamines",
+  "name": "Datamines",
+  "desc": "Machine Data & Manufacturing Insights",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "digital-social",
+   "exhibition-events"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Digital & Social"
+  ],
+  "file": "envisionar-datamines-logo-design-colour-palette.jpg",
+  "url": "https://envisionar.in/portfolio-pages/datamines",
+  "w": 1400,
+  "h": 788
+ },
+ {
+  "slug": "dr-priyas-pmc",
+  "name": "Dr. Priya's Pain Management Centre",
+  "desc": "Pain Management Centre",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "signage",
+   "packaging"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Signage & Hoardings"
+  ],
+  "file": "envisionar-dr-priyas-pmc-clinic-brand-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/dr-priyas-pmc",
+  "w": 843,
+  "h": 1400
+ },
+ {
+  "slug": "easytax",
+  "name": "EasyTax",
+  "desc": "Simplified Taxes",
+  "svc": [
+   "brand-identity",
+   "print-design"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design"
+  ],
+  "file": "envisionar-easytax-brand-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/easytax",
+  "w": 847,
+  "h": 1400
+ },
+ {
+  "slug": "gordey-groups",
+  "name": "Gordey Groups",
+  "desc": "Project Management & Civil Engineering",
+  "svc": [
+   "brand-identity",
+   "signage",
+   "print-design"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Signage & Hoardings",
+   "Print Design"
+  ],
+  "file": "envisionar-gordey-groups-brand-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/gordey-groups",
+  "w": 955,
+  "h": 1400
+ },
+ {
+  "slug": "greenzone-avkins",
+  "name": "Akvin's Greenzone",
+  "desc": "Vertical Gardens & Garden Furniture",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "packaging",
+   "signage"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Packaging & More"
+  ],
+  "file": "envisionar-greenzone-avkins-brand-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/greenzone-avkins",
+  "w": 764,
+  "h": 1400
+ },
+ {
+  "slug": "maha-handloom",
+  "name": "Maha Handloom",
+  "desc": "Maharashtra State Handloom Corporation",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "packaging",
+   "signage"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Packaging & More"
+  ],
+  "file": "envisionar-maha-handloom-brand-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/maha-handloom",
+  "w": 1056,
+  "h": 1400
+ },
+ {
+  "slug": "metroarch",
+  "name": "MetroArch Studio LLP",
+  "desc": "Architecture Group",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "signage",
+   "packaging"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Signage & Hoardings"
+  ],
+  "file": "envisionar-metroarch-brand-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/metroarch",
+  "w": 872,
+  "h": 1400
+ },
+ {
+  "slug": "neemboli",
+  "name": "Neemboli",
+  "desc": "Sustainable Handloom Clothing",
+  "svc": [
+   "brand-identity",
+   "packaging",
+   "print-design"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Packaging & More",
+   "Print Design"
+  ],
+  "file": "envisionar-neemboli-phone-logo-mockup.jpg",
+  "url": "https://envisionar.in/portfolio-pages/neemboli",
+  "w": 803,
+  "h": 556
+ },
+ {
+  "slug": "nitya",
+  "name": "Nitya",
+  "desc": "Eco-Friendly Bathroom Solutions",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "packaging"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Packaging & More"
+  ],
+  "file": "envisionar-nitya-desktop-logo-mockup.jpg",
+  "url": "https://envisionar.in/portfolio-pages/nitya",
+  "w": 531,
+  "h": 531
+ },
+ {
+  "slug": "saga",
+  "name": "Saga",
+  "desc": "Exquisite Granite Solutions",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "signage"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Signage & Hoardings"
+  ],
+  "file": "envisionar-saga-phone-logo-mockup.jpg",
+  "url": "https://envisionar.in/portfolio-pages/saga",
+  "w": 1400,
+  "h": 911
+ },
+ {
+  "slug": "saj-jewellers",
+  "name": "SAJ",
+  "desc": "Designer Jewelry & Watches",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "signage"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Signage & Hoardings"
+  ],
+  "file": "envisionar-saj-jewellers-medallion-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/saj-jewellers",
+  "w": 980,
+  "h": 1400
+ },
+ {
+  "slug": "sattvam-solutions",
+  "name": "Sattvam Solutions",
+  "desc": "Architects & Sustainability Specialists",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "digital-social"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Digital & Social"
+  ],
+  "file": "envisionar-sattvam-solutions-wordmark-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/sattvam-solutions",
+  "w": 630,
+  "h": 1400
+ },
+ {
+  "slug": "vernacular-branding",
+  "name": "Vernacular Branding",
+  "desc": "Book Launch & Exhibition",
+  "svc": [
+   "exhibition-events",
+   "print-design",
+   "brand-identity"
+  ],
+  "tags": [
+   "Exhibition & Events",
+   "Print Design",
+   "Brand Identity"
+  ],
+  "file": "envisionar-vernacular-branding-book-cover-alt-1.jpg",
+  "url": "https://envisionar.in/portfolio-pages/vernacular-branding",
+  "w": 1400,
+  "h": 985
+ },
+ {
+  "slug": "wealth-wizard",
+  "name": "Wealth Wizard",
+  "desc": "Mutual Funds & Finance Advisors",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "signage"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Signage & Hoardings"
+  ],
+  "file": "envisionar-wealth-wizard-phone-logo-mockup.jpg",
+  "url": "https://envisionar.in/portfolio-pages/wealth-wizard",
+  "w": 800,
+  "h": 960
+ },
+ {
+  "slug": "ajmera-tyre",
+  "name": "Ajmera Tyre",
+  "desc": "Automotive retail",
+  "svc": [
+   "brand-identity",
+   "print-design"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design"
+  ],
+  "file": "envisionar-ajmera-tyre-brand-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/ajmera-tyre",
+  "w": 1047,
+  "h": 1400
+ },
+ {
+  "slug": "andaaz",
+  "name": "Andaaz",
+  "desc": "Retail signage & identity",
+  "svc": [
+   "brand-identity",
+   "signage"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Signage & Hoardings"
+  ],
+  "file": "envisionar-andaaz-signage-detail.jpg",
+  "url": "https://envisionar.in/portfolio-pages/andaaz",
+  "w": 1030,
+  "h": 1400
+ },
+ {
+  "slug": "baidyanath",
+  "name": "Baidyanath",
+  "desc": "Advertising / print campaign",
+  "svc": [
+   "brand-identity",
+   "print-design"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design"
+  ],
+  "file": "envisionar-baidyanath-bhasma-range-advertisement.png",
+  "url": "https://envisionar.in/portfolio-pages/baidyanath",
+  "w": 1400,
+  "h": 1082
+ },
+ {
+  "slug": "century-travels",
+  "name": "Century Travels",
+  "desc": "Travel agency",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "signage"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Signage & Hoardings"
+  ],
+  "file": "envisionar-century-travels-brand-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/century-travels",
+  "w": 1132,
+  "h": 1400
+ },
+ {
+  "slug": "columbia-hospital",
+  "name": "Columbia Multispeciality Hospital & Research Centre",
+  "desc": "Healthcare / hospital collateral",
+  "svc": [
+   "brand-identity",
+   "print-design"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design"
+  ],
+  "file": "envisionar-columbia-hospital-hospital-folder-front-panel.jpg",
+  "url": "https://envisionar.in/portfolio-pages/columbia-hospital",
+  "w": 1400,
+  "h": 811
+ },
+ {
+  "slug": "headstart",
+  "name": "Headstart Manpower Consultants",
+  "desc": "Brand identity / recruitment consultancy",
+  "svc": [
+   "brand-identity",
+   "digital-social"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Digital & Social"
+  ],
+  "file": "envisionar-headstart-logo.png",
+  "url": "https://envisionar.in/portfolio-pages/headstart",
+  "w": 1200,
+  "h": 1200
+ },
+ {
+  "slug": "iffi-1993",
+  "name": "IFFI 1993",
+  "desc": "Archival identity / film festival",
+  "svc": [
+   "brand-identity",
+   "print-design"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design"
+  ],
+  "file": "envisionar-iffi-1993-identity-mark-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/iffi-1993",
+  "w": 990,
+  "h": 1400
+ },
+ {
+  "slug": "kastakar",
+  "name": "Kastakar",
+  "desc": "Brand identity",
+  "svc": [
+   "brand-identity"
+  ],
+  "tags": [
+   "Brand Identity"
+  ],
+  "file": "envisionar-kastakar-brand-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/kastakar",
+  "w": 1400,
+  "h": 990
+ },
+ {
+  "slug": "maharashtra-mandal-trivandrum",
+  "name": "Maharashtra Mandal Trivandrum",
+  "desc": "Cultural association",
+  "svc": [
+   "brand-identity",
+   "signage"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Signage & Hoardings"
+  ],
+  "file": "envisionar-maharashtra-mandal-trivandrum-emblem-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/maharashtra-mandal-trivandrum",
+  "w": 1009,
+  "h": 1400
+ },
+ {
+  "slug": "mandap",
+  "name": "Mandap",
+  "desc": "Events / hospitality",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "signage",
+   "exhibition-events"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Signage & Hoardings"
+  ],
+  "file": "envisionar-mandap-brand-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/mandap",
+  "w": 1258,
+  "h": 1400
+ },
+ {
+  "slug": "megapower-elektroenergiya",
+  "name": "Megapower Elektroenergiya Inc.",
+  "desc": "Energy / power",
+  "svc": [
+   "brand-identity"
+  ],
+  "tags": [
+   "Brand Identity"
+  ],
+  "file": "envisionar-megapower-elektroenergiya-logo-concept-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/megapower-elektroenergiya",
+  "w": 1400,
+  "h": 990
+ },
+ {
+  "slug": "nap-neeru-art-printers",
+  "name": "NAP — Neeru Art Printers",
+  "desc": "Printing & greeting cards",
+  "svc": [
+   "brand-identity",
+   "print-design"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design"
+  ],
+  "file": "envisionar-nap-neeru-art-printers-business-card-stack-mockup.jpg",
+  "url": "https://envisionar.in/portfolio-pages/nap-neeru-art-printers",
+  "w": 1400,
+  "h": 1400
+ },
+ {
+  "slug": "rivaaz-boutique",
+  "name": "Rivaaz Boutique",
+  "desc": "Fashion retail / stationery design",
+  "svc": [
+   "brand-identity",
+   "print-design"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design"
+  ],
+  "file": "envisionar-rivaaz-boutique-envelope.jpg",
+  "url": "https://envisionar.in/portfolio-pages/rivaaz-boutique",
+  "w": 1400,
+  "h": 1067
+ },
+ {
+  "slug": "shah-furniture",
+  "name": "Shah Furniture",
+  "desc": "Brand identity / stationery design",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "digital-social"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Digital & Social"
+  ],
+  "file": "envisionar-shah-furniture-logo.jpg",
+  "url": "https://envisionar.in/portfolio-pages/shah-furniture",
+  "w": 1174,
+  "h": 1206
+ },
+ {
+  "slug": "shridhar-steels",
+  "name": "Shridhar Steels",
+  "desc": "Brand identity / stationery design",
+  "svc": [
+   "brand-identity",
+   "print-design"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design"
+  ],
+  "file": "envisionar-shridhar-steels-logo.jpg",
+  "url": "https://envisionar.in/portfolio-pages/shridhar-steels",
+  "w": 1400,
+  "h": 1239
+ },
+ {
+  "slug": "siddhartha-welfare-association",
+  "name": "Siddhartha Welfare Association",
+  "desc": "Welfare / non-profit",
+  "svc": [
+   "brand-identity",
+   "signage"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Signage & Hoardings"
+  ],
+  "file": "envisionar-siddhartha-welfare-association-emblem-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/siddhartha-welfare-association",
+  "w": 895,
+  "h": 1400
+ },
+ {
+  "slug": "snugo-tali",
+  "name": "Snugo Tali",
+  "desc": "Brand identity",
+  "svc": [
+   "brand-identity",
+   "signage"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Signage & Hoardings"
+  ],
+  "file": "envisionar-snugo-tali-monogram-signage-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/snugo-tali",
+  "w": 1094,
+  "h": 1400
+ },
+ {
+  "slug": "strategic-concepts",
+  "name": "Strategic Concepts (India) Pvt. Ltd.",
+  "desc": "Business consulting / training collateral",
+  "svc": [
+   "brand-identity",
+   "print-design"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design"
+  ],
+  "file": "envisionar-strategic-concepts-logo.jpg",
+  "url": "https://envisionar.in/portfolio-pages/strategic-concepts",
+  "w": 1280,
+  "h": 678
+ },
+ {
+  "slug": "vrushali-offset-works",
+  "name": "Vrushali Offset Works Pvt. Ltd.",
+  "desc": "Printing",
+  "svc": [
+   "brand-identity",
+   "print-design",
+   "digital-social"
+  ],
+  "tags": [
+   "Brand Identity",
+   "Print Design",
+   "Digital & Social"
+  ],
+  "file": "envisionar-vrushali-offset-works-brand-identity-board.jpg",
+  "url": "https://envisionar.in/portfolio-pages/vrushali-offset-works",
+  "w": 1064,
+  "h": 1400
+ }
+]

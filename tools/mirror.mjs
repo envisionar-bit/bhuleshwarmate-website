@@ -6,7 +6,8 @@ import path from 'path';
 import crypto from 'crypto';
 
 const ORIGIN = 'https://www.bhuleshwarmate.com';
-const OUT = path.resolve('public');
+// Site lives at the repo root so GitHub Pages ("deploy from branch /") serves it directly.
+const OUT = path.resolve('.');
 const PAGES = ['', 'profile', 'profile/professionalsummary', 'design-practice', 'teaching-outreach',
   'public-engagement', 'administrative-roles', 'awards', 'gallery', 'contact'];
 const ASSET_TYPES = new Set(['image', 'font', 'stylesheet', 'media']);
@@ -14,7 +15,9 @@ const EXT = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'im
   'image/avif': 'avif', 'image/x-icon': 'ico', 'font/woff2': 'woff2', 'font/woff': 'woff', 'font/ttf': 'ttf',
   'text/css': 'css', 'video/mp4': 'mp4', 'application/font-woff2': 'woff2', 'application/font-woff': 'woff' };
 
-fs.rmSync(OUT, { recursive: true, force: true });
+// Clean only what this script generates (never tools/, .git, README, ...)
+for (const e of ['assets', '_files', 'index.html', ...PAGES.filter(Boolean).map(p => p.split('/')[0])])
+  fs.rmSync(path.join(OUT, e), { recursive: true, force: true });
 fs.mkdirSync(path.join(OUT, 'assets'), { recursive: true });
 
 const urlToLocal = new Map(); // absolute url -> /assets/xxx.ext
@@ -52,7 +55,8 @@ for (const p of PAGES) {
   const page = await ctx.newPage();
   const pending = [];
   page.on('response', r => pending.push(record(r)));
-  await page.goto(`${ORIGIN}/${p}`, { waitUntil: 'networkidle', timeout: 90000 });
+  await page.goto(`${ORIGIN}/${p}`, { waitUntil: 'load', timeout: 90000 });
+  await page.waitForLoadState('networkidle', { timeout: 30000 }).catch(() => {}); // busy pages may never go fully idle
   // scroll to trigger lazy-loaded media
   await page.evaluate(async () => {
     for (let y = 0; y < document.body.scrollHeight; y += 500) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 150)); }
@@ -93,18 +97,20 @@ for (const [p, html] of Object.entries(htmls)) {
   fs.writeFileSync(dest, h);
 }
 // Second pass: srcset variants / unrequested media still pointing at Wix CDNs -> download with curl
-const LEFT = /https:\/\/static\.(?:wixstatic|parastorage)\.com[^"'\s)<>\\]*/g;
-const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]);
+const LEFT = /(?:https:)?\/\/static\.(?:wixstatic|parastorage)\.com[^"'\s)<>\\]*/g;
+const SKIP = new Set(['node_modules', '.git', 'tools']);
+const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e => e.isDirectory() ? (SKIP.has(e.name) ? [] : walk(path.join(d, e.name))) : [path.join(d, e.name)]);
 const textFiles = walk(OUT).filter(f => /\.(html|css)$/.test(f));
 const left = new Set();
-for (const f of textFiles) for (const m of fs.readFileSync(f, 'utf8').matchAll(LEFT)) left.add(m[0].replace(/&amp;/g, '&'));
+for (const f of textFiles) for (const m of fs.readFileSync(f, 'utf8').matchAll(LEFT)) left.add(m[0].replace(/&amp;/g, '&')); // may be protocol-relative
 const map2 = new Map();
 for (const u of left) {
+  const url = u.startsWith('//') ? 'https:' + u : u;
   try {
     const tmp = path.join(OUT, 'assets', '.tmp');
-    const ct = execSync(`curl -sSf -m 60 -H 'Accept: image/avif,image/webp,image/*,*/*' -o '${tmp}' -w '%{content_type}' '${u}'`).toString().split(';')[0].trim();
-    const ext = EXT[ct] || path.extname(new URL(u).pathname).slice(1) || 'bin';
-    const name = crypto.createHash('sha1').update(u).digest('hex').slice(0, 16) + '.' + ext;
+    const ct = execSync(`curl -sSf -m 60 -H 'Accept: image/avif,image/webp,image/*,*/*' -o '${tmp}' -w '%{content_type}' '${url}'`).toString().split(';')[0].trim();
+    const ext = EXT[ct] || path.extname(new URL(url).pathname).slice(1) || 'bin';
+    const name = crypto.createHash('sha1').update(url).digest('hex').slice(0, 16) + '.' + ext;
     fs.renameSync(tmp, path.join(OUT, 'assets', name));
     map2.set(u, '/assets/' + name);
   } catch (e) { console.warn('failed', u); }
@@ -116,4 +122,13 @@ for (const f of textFiles) {
   fs.writeFileSync(f, t);
 }
 console.log('second pass:', map2.size, 'of', left.size);
+// Linked documents served from the Wix domain (/_files/...)
+for (const f of walk(OUT).filter(f => f.endsWith('.html'))) {
+  for (const m of fs.readFileSync(f, 'utf8').matchAll(/href="(\/_files\/[^"?]+)/g)) {
+    const dest = path.join(OUT, m[1]);
+    fs.mkdirSync(path.dirname(dest), { recursive: true });
+    execSync(`curl -sSfL -m 120 -o '${dest}' '${ORIGIN}${m[1]}'`);
+  }
+}
+execSync('node tools/relativize.mjs', { stdio: 'inherit' });
 console.log('done:', Object.keys(htmls).length, 'pages,', urlToLocal.size, 'assets');

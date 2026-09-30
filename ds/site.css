@@ -601,5 +601,23 @@ a:hover > .arrow.go, .pill:hover .arrow.go { transform: translateX(4px); }
   .teaser { padding: 64px 0 72px; }
   .teaser .side, .teaser .body { grid-column: 1; }
   .teaser .side { margin-bottom: 18px; }
-  .thumbs { grid-template-columns: minmax(0, 1fr); }
+  .thumbs { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-right: calc(var(--gutter) * -1); padding-right: var(--gutter); }
+  .thumbs::-webkit-scrollbar { display: none; }
+  .thumbs a { flex: 0 0 72%; scroll-snap-align: start; }
+}
+
+/* ---- phones: keep the signature vertical line (hairline + content column) ---- */
+@media (max-width: 560px) {
+  .cols, .split, .contact { grid-template-columns: 1px minmax(0, 1fr); column-gap: 14px; }
+  .rule, .split > .rule, .cols > .rule, .contact > .rule, .hero .rule, .ph .rule { display: block; grid-column: 1; width: 1px; justify-self: start; }
+  /* home hero and page heroes: portrait/labels on top, then the line beside the text and the big title */
+  .hero .cols, .ph .cols { grid-template-rows: auto auto 1fr; min-height: calc(100svh - 96px); }
+  .hero .side, .ph .side { grid-column: 1 / -1; grid-row: 1; flex-direction: row; justify-content: space-between; align-items: flex-end; gap: 16px; }
+  .hero .rule, .ph .rule { grid-row: 2 / span 2; }
+  .hero .top, .ph .top { grid-column: 2; grid-row: 2; padding-top: 0; }
+  .hero .name, .ph .ttl { grid-column: 2; grid-row: 3; }
+  .hero .top, .ph .top { margin-top: 12px; }
+  /* sections with a label column: label above, line + content below */
+  .split > .stick, .contact > .side, .studio .side, .teaser .side { grid-column: 1 / -1; grid-row: auto; margin-bottom: 14px; }
+  .split > :not(.stick):not(.rule), .contact > :not(.side):not(.rule), .studio .body, .teaser .body { grid-column: 2; }
 }

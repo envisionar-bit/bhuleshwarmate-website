@@ -4,7 +4,11 @@
 // Generators (<!--@work-grid-->, <!--@archive-grid-->) are filled from src/data/*.json.
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 
+// Content hashes go into the CSS/JS URLs (?v=...), so a page can never be paired with a stale cached stylesheet
+const hash = f => crypto.createHash('sha1').update(fs.readFileSync(f)).digest('hex').slice(0, 8);
+const CSS_V = hash('ds/site.css'), JS_V = hash('ds/site.js');
 const SITE = 'Prof. Bhuleshwar Mate';
 const ORIGIN = 'https://www.bhuleshwarmate.com';   // canonical domain (used for canonical links and the sitemap)
 const MENU = [
@@ -87,6 +91,7 @@ function build(file) {
     .replace('{{next}}', next + legal)
     .replace('{{canonical}}', meta.absoluteRoot ? '<meta name="robots" content="noindex">' : `<link rel="canonical" href="${canonicalUrl}">`)
     .replace('{{scripts}}', (meta.scripts || []).map(s => `<script src="{{root}}${s}" defer></script>`).join('\n'))
+    .replaceAll('{{cssv}}', CSS_V).replaceAll('{{jsv}}', JS_V)
     .replaceAll('{{home}}', meta.absoluteRoot ? '/' : (root || './'))
     .replaceAll('{{root}}', root);
   fs.mkdirSync(path.dirname(out) || '.', { recursive: true });
